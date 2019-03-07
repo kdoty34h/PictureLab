@@ -109,27 +109,50 @@ public class IntArrayWorker
         }
         return count;
   }
-  public int getColTotal(int n)
+  public int getTotal(int n)
   {
-      int count = 0;
-      for (int[] row : matrix)
-        for (int pixel : row)
+      int total = 0;
+      for (int row = 0; row < matrix.length; row++)
+      {
+        for (int col = 0; col < matrix[0].length; col++)
         {
-            if (pixel == n)
-                count++;
+          total = total + matrix[row][col];
         }
-        return count;
+      }
+       return total;
         }
-        
-  public int getLargest(int n)
+  public int getTotalNested(int n)
   {
-      int count = 0;
-      for (int[] row : matrix)
-        for (int pixel : row)
+      int total = 0;
+      for (int[] rowArray : matrix)
+      {
+            for (int item : rowArray)
         {
-            if (pixel == n)
-                count++;
+            total = total + item;
         }
-        return count;
+      }
+      return total;
+  }
+  public int getLargest()
+  {
+     int max = matrix[0][0];
+     for(int[] row:matrix)
+        for (int pixel:row)
+        {
+            if(pixel > max)
+            {
+                max = pixel;
+            }
         }
- }
+        return max;
+    }
+    public int getColTotal(int n)
+    {
+        int sum = 0;
+        for (int i= 0; i<matrix.length; i++)
+        {
+            sum = matrix[i][n]+sum;
+        }
+        return sum;
+    }
+}
