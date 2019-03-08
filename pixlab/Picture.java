@@ -251,7 +251,7 @@ public class Picture extends SimplePicture
   {
     Picture beach = new Picture("beach.jpg");
     beach.explore();
-    beach.zeroBlue();
+    beach.keepOnlyBlue();
     beach.explore();
   }
   
