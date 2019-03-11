@@ -1,4 +1,4 @@
-import java.awt.*;
+    import java.awt.*;
 import java.awt.font.*;
 import java.awt.geom.*;
 import java.awt.image.BufferedImage;
@@ -249,7 +249,7 @@ public class Picture extends SimplePicture
    */
   public static void main(String[] args) 
   {
-    Picture beach = new Picture("beach.jpg");
+    Picture beach = new Picture("caterpillar.jpg");
     beach.explore();
     beach.keepOnlyBlue();
     beach.explore();
