@@ -50,7 +50,34 @@ public class PictureTester
     swan.edgeDetection(10);
     swan.explore();
   }
+  public static void testMirrorGull()
+  {
+    Picture seagull = new Picture("Seagull.jpg");
+    seagull.explore();
+    seagull.mirrorVertical();
+    seagull.mirrorHorizontal();
+    seagull.explore();
+  }
+   public void createCollage()
+  {
+    Picture flower1 = new Picture("flower1.jpg");
+    Picture flower2 = new Picture("flower2.jpg");
+    this.copy(flower1,0,20);
+    this.copy(flower2,100,40);
+    this.copy(flower1,200,60);
+    Picture flowerNoBlue = new Picture(flower2);
+    flowerNoBlue.zeroBlue();
+    this.copy(flowerNoBlue,300,80);
+    this.copy(flower1,400,100);
+    this.copy(flower2,500,120);
+    this.mirrorVertical();
+    this.write("collage.jpg");
   
+  public static void()
+  {
+      beach.explore();
+      
+    }
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -68,7 +95,7 @@ public class PictureTester
     testMirrorVertical();
     testMirrorTemple();
     //testMirrorArms();
-    //testMirrorGull();
+    testMirrorGull();
     //testMirrorDiagonal();
     testCollage();
     //testCopy();
