@@ -46,7 +46,7 @@ public class PictureTester
   /** Method to test edgeDetection */
   public static void testEdgeDetection()
   {
-    Picture swan = new Picture("swan.jpg");
+    Picture swan = new Picture("power.jpg");
     swan.edgeDetection(10);
     swan.explore();
   }
@@ -58,7 +58,7 @@ public class PictureTester
     seagull.mirrorHorizontal();
     seagull.explore();
   }
-   public void createCollage()
+   /* public void createCollage()
   {
     Picture flower1 = new Picture("flower1.jpg");
     Picture flower2 = new Picture("flower2.jpg");
@@ -73,11 +73,11 @@ public class PictureTester
     this.mirrorVertical();
     this.write("collage.jpg");
   
-  public static void()
-  {
-      beach.explore();
-      
+   //public static void()
+   //{
+   //    beach.explore();
     }
+    */
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -97,7 +97,7 @@ public class PictureTester
     //testMirrorArms();
     testMirrorGull();
     //testMirrorDiagonal();
-    testCollage();
+    //testCollage();
     //testCopy();
     //testEdgeDetection();
     //testEdgeDetection2();
